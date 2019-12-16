@@ -36,7 +36,7 @@ include '::corp104_memcached_exporter'
 
 ```puppet
 class { 'corp104_memcached_exporter':
-  download_url => 'https://github.com/Lusitaniae/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.6.0.linux-amd64.tar.gz',
+  download_url => 'https://github.com/Lusitaniae/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-amd64.tar.gz',
 }
 ```
 
@@ -45,7 +45,7 @@ class { 'corp104_memcached_exporter':
 ```puppet
 class { 'corp104_memcached_exporter':
   http_proxy   => 'http://change.proxy.com:3128',
-  download_url => 'https://github.com/Lusitaniae/memcached_exporter/releases/download/v0.5.0/memcached_exporter-0.6.0.linux-amd64.tar.gz',
+  download_url => 'https://github.com/Lusitaniae/memcached_exporter/releases/download/v0.6.0/memcached_exporter-0.6.0.linux-amd64.tar.gz',
 }
 ```
 
