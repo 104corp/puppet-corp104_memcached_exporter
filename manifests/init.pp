@@ -61,7 +61,6 @@ class corp104_memcached_exporter (
   String $group,
   Optional[Array] $extra_groups,
   String $init_style,
-  String $env_file_path,
   Hash[String, Scalar] $env_vars = {},
 ){
   contain corp104_memcached_exporter::install
