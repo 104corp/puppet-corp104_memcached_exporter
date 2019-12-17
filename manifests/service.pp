@@ -1,4 +1,4 @@
-class corp104_memcached_exporter::service inherits corp104_apache_exporter {
+class corp104_memcached_exporter::service inherits corp104_memcached_exporter {
 
   $real_provider = $corp104_memcached_exporter::init_style ? {
     'sles'  => 'redhat',  # mimics puppet's default behaviour
