@@ -18,7 +18,7 @@ class corp104_memcached_exporter::install inherits corp104_memcached_exporter {
         extract_path    => '/opt',
         source          => $corp104_memcached_exporter::download_url,
         checksum_verify => false,
-        creates         => "/opt/${corp104_memcached_exporter::package_name}-${corp104_amemcached_exporter::version}.linux-${os_arch}/${corp104_memcached_exporter::package_name}",
+        creates         => "/opt/${corp104_memcached_exporter::package_name}-${corp104_memcached_exporter::version}.linux-${os_arch}/${corp104_memcached_exporter::package_name}",
         cleanup         => true,
         #proxy_server    => $corp104_memcached_exporter::http_proxy,
       }
