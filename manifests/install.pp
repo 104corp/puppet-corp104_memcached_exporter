@@ -7,6 +7,10 @@ class corp104_memcached_exporter::install inherits corp104_memcached_exporter {
   'amd64'  => 'amd64',
   default  => 'amd64',
   }
+  $proxy_server = empty($corp104_nginx_stub_exporter::http_proxy) ? {
+    true    => undef,
+    default => $corp104_memcached_exporter::http_proxy,
+  }
   # install
   case $corp104_memcached_exporter::install_method {
     'url': {
@@ -18,7 +22,7 @@ class corp104_memcached_exporter::install inherits corp104_memcached_exporter {
         checksum_verify => false,
         creates         => "/opt/${corp104_memcached_exporter::package_name}-${corp104_memcached_exporter::version}.linux-${os_arch}/${corp104_memcached_exporter::package_name}",
         cleanup         => true,
-        #proxy_server    => $corp104_memcached_exporter::http_proxy,
+        proxy_server    => $proxy_server,
       }
       file { "/opt/${corp104_memcached_exporter::package_name}-${corp104_memcached_exporter::version}.linux-${os_arch}/${corp104_memcached_exporter::package_name}":
           owner => 'root',
