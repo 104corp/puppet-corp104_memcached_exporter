@@ -112,7 +112,7 @@ class corp104_memcached_exporter::install inherits corp104_memcached_exporter {
             }
           }
           else {
-            file { "/etc/init.d/${corp104_amemcached_exporter::service_name}":
+            file { "/etc/init.d/${corp104_memcached_exporter::service_name}":
               mode    => '0555',
               owner   => 'root',
               group   => 'root',
