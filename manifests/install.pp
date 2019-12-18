@@ -7,7 +7,7 @@ class corp104_memcached_exporter::install inherits corp104_memcached_exporter {
   'amd64'  => 'amd64',
   default  => 'amd64',
   }
-  $proxy_server = empty($corp104_nginx_stub_exporter::http_proxy) ? {
+  $proxy_server = empty($corp104_memcached_exporter::http_proxy) ? {
     true    => undef,
     default => $corp104_memcached_exporter::http_proxy,
   }
