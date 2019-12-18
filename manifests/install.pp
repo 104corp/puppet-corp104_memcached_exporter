@@ -7,7 +7,7 @@ class corp104_memcached_exporter::install inherits corp104_memcached_exporter {
   'amd64'  => 'amd64',
   default  => 'amd64',
   }
-  
+  notify { 'hello': }
   # install
   case $corp104_memcached_exporter::install_method {
     'url': {
